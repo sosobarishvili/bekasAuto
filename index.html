@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Beka's Auto School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo" id="logo">Beka's Auto School</div>
+    </nav>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      <select id="language-select" onchange="switchLanguage()">
+        <option value="en">English</option>
+        <option value="ge">ქართული</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 id="welcome-text">Welcome to Beka's Auto School</h1>
+    <!-- Icons Section -->
+    <div class="social-icons">
+      <a href="tel:+995511305304" aria-label="Phone"><i class="fa-solid fa-phone-volume fa-2xl"
+          style="color: #47d534;"></i></a>
+      <a href="https://www.tiktok.com/@bekasdrivingschool?_t=8pTZ69Xhc7b&_r=1" target="_blank" aria-label="TikTok"><i
+          class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a>
+      <a href="https://www.facebook.com/bekasdrivingschool?mibextid=ZbWKwL" target="_blank" aria-label="Facebook"><i
+          class="fa-brands fa-facebook-f fa-2xl" style="color: #0852d4;"></i></a>
+      <a href="https://www.instagram.com/bekasdrivingschool?igsh=MWc2dWk2ZmszNzQ5Yg==" target="_blank"
+        aria-label="instagram"> <i class="fa-brands fa-instagram fa-2xl" style="color: #d49dc8;"></i> </a>
+    </div>
+    <div class="booking">
+      <a id="booking-visit" href="tel:+995511305304">Book now</a>
+    </div>
+  </section>
+
+  <!-- Image Gallery Section -->
+  <section class="gallery">
+    <img src="./assets/1.jpg" alt="Driving School Image 1">
+    <img src="./assets/2.jpg" alt="Driving School Image 2">
+    <img src="./assets/3.jpg" alt="Driving School Image 3">
+    <img src="./assets/4.jpg" alt="Driving School Image 4">
+  </section>
+
+  <!-- Contact Section with Map -->
+  <section class="contact">
+    <h2 id="contact-title">Contact Us</h2>
+    <div class="contact-info">
+      <div id="phone"><strong>Phone:</strong> <a href="tel:+995511305304">+995 551 305 304</a></div>
+      <div id="email"><strong>Email:</strong> <a href="mailto:Bekasautoschool@gmail.com">Bekasautoschool@gmail.com</a>
+      </div>
+      <div id="address"><strong>Address:</strong> University street #11, Tbilisi, Georgia</div>
+    </div>
+    <div class="map-container">
+      <iframe class="google-map"
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2978.1618155772985!2d44.722077075551574!3d41.71702697548462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQzJzAxLjMiTiA0NMKwNDMnMjguOCJF!5e0!3m2!1ska!2sge!4v1725561683609!5m2!1ska!2sge"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <script>
+
+    function switchLanguage() {
+      const language = document.getElementById('language-select').value;
+      const translations = {
+        en: {
+          logo: "Beka's Auto School",
+          welcome: "Welcome to Beka's Auto School",
+          contact: "Contact Us",
+          phone: "Phone: +995 551 305 304",
+          email: "Email: Bekasautoschool@gmail.com",
+          address: "Address: University street #11, Tbilisi, Georgia",
+          book: "Book now"
+        },
+        ge: {
+          logo: "ბექას ავტოსკოლა",
+          welcome: "მოგესალმებით ბექას ავტოსკოლაში",
+          contact: "დაგვიკავშირდით",
+          phone: "ტელეფონი: +995 551 305 304",
+          email: "ელფოსტა: Bekasautoschool@gmail.com",
+          address: "მისამართი: უნივერსიტეტის ქუჩა #11, თბილისი, საქართველო",
+          book: "დაჯავშნე ვიზიტი"
+        }
+      };
+
+      document.getElementById('logo').innerText = translations[language].logo;
+      document.getElementById('welcome-text').innerText = translations[language].welcome;
+      document.getElementById('contact-title').innerText = translations[language].contact;
+      document.getElementById('phone').innerText = translations[language].phone;
+      document.getElementById('email').innerText = translations[language].email;
+      document.getElementById('address').innerText = translations[language].address;
+      document.getElementById('booking-visit').innerText = translations[language].book;
+    }
+  </script>
+</body>
+
+</html>
