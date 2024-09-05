@@ -12,7 +12,7 @@ body {
 
 /* Navbar */
 .header {
-  background-color: #4a5a3d;
+  background-color: hsla(93, 19%, 30%, 0.586);
   padding: 20px;
   text-align: center;
   position: relative;
